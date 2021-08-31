@@ -1,0 +1,26 @@
+{
+  "name": "react-typescript-context-provider-example",
+  "version": "1.0.0",
+  "description": "An example app using Typescript, React, createContext, useReducer, and a custom hook.",
+  "main": "src/index.tsx",
+  "repository": "git@github.com:dckesler/react-typescript-context-provider-example.git",
+  "author": "Daniel Kesler <danielckesler@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack serve --mode production",
+    "analyze-bundle": "webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json ./public/"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.2",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0"
+  }
+}
