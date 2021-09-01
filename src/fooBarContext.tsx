@@ -48,6 +48,10 @@ export const FooBarContext = createContext<FooBarContextInterface>([
   () => {},
 ]);
 
+// This is the parent component that will provide all its component
+// children with access to the state and dispatch functions. All
+// children within the same FooBarProvider will have the same state
+// available to them.
 export function FooBarProvider({ children }) {
   const [state, _dispatch] = useReducer(fooBarReducer, {
     foo: startingFoo,

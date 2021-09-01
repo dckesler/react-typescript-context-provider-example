@@ -2,6 +2,8 @@ import React from "react";
 import { useFoo } from "./useFoo";
 
 export function Foo() {
+  // Pulling values and methods from the useFoo hook which correspond to the
+  // FooBarProvider's useReducer state that's being used in `index.tsx`.
   const { foo, setFoo, doubleFoo } = useFoo();
   return (
     <div>

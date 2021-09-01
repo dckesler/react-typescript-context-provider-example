@@ -1,3 +1,6 @@
+// This is the reducer function. It runs when we use `dispatch` from the `useReducer`
+// hook. The returned state represents the state coming out of the `useReducer` hook
+// and ultimately our customHooks `useFoo` and `useBar`.
 export function fooBarReducer(state: FooBarState, action: Actions): FooBarState {
   switch(action.type) {
     // Basic set action for the `fo`o state
@@ -42,16 +45,19 @@ export function fooBarReducer(state: FooBarState, action: Actions): FooBarState 
   }
 };
 
+// Here's our Foo type that will go into our state
 export interface Foo {
   pityThe: () => void;
   fooAmount: number;
 }
 
+// Here's our Bar type that will go into our state
 export interface Bar {
   walkInto: () => void;
   name: string;
 }
 
+// Represents that state made available via this reducer
 export type FooBarState = {
   foo: Foo;
   bar: Bar;

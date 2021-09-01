@@ -3,6 +3,8 @@ import { Bar } from './fooBarReducer';
 import { FooBarContext } from './fooBarContext';
 
 export function useBar() {
+  // The useContext values are the state and dispatch given to the
+  // `value` prop for the `FooBarContext.Provider` in `fooBarContext.tsx`
   const [{ bar }, dispatch] = useContext(FooBarContext);
 
   const setBar = useCallback((bar: Bar) => dispatch('setBar', bar), []);
